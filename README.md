@@ -46,6 +46,23 @@ Belongs to the [bc boilerplates](https://bcboilerplates.com/) ecosystem
 - [x] E2E and units tests.
 - [x] Docker.
 - [x] CI (Github Actions).
+- [x] Built-in AdminJS panel for managing users and sessions.
+
+## Admin panel
+
+The boilerplate ships with [AdminJS](https://adminjs.co) so you can inspect and manage data without building screens from scratch.
+
+- The dashboard is mounted at `ADMIN_PANEL_ROOT_PATH` (defaults to `/admin`). Open `http://localhost:3000/admin` when running locally.
+- Authentication reuses the regular users table. Sign in with any account that has `RoleEnum.admin` (the seeds create `admin@example.com` / `secret`).
+- Cookies/sessions are configured through:
+
+```bash
+ADMIN_PANEL_ROOT_PATH=/admin
+ADMIN_PANEL_COOKIE_NAME=adminjs
+ADMIN_PANEL_COOKIE_PASSWORD=change-me
+```
+
+Set a strong `ADMIN_PANEL_COOKIE_PASSWORD` before exposing the panel publicly.
 
 ## Contributors
 

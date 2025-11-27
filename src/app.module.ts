@@ -27,6 +27,8 @@ import { MailerModule } from './mailer/mailer.module';
 import { MongooseModule } from '@nestjs/mongoose';
 import { MongooseConfigService } from './database/mongoose-config.service';
 import { DatabaseConfig } from './database/config/database-config.type';
+import adminConfig from './admin-panel/config/admin.config';
+import { AdminPanelModule } from './admin-panel/admin-panel.module';
 
 // <database-block>
 const infrastructureDatabaseModule = (databaseConfig() as DatabaseConfig)
@@ -55,6 +57,7 @@ const infrastructureDatabaseModule = (databaseConfig() as DatabaseConfig)
         facebookConfig,
         googleConfig,
         appleConfig,
+        adminConfig,
       ],
       envFilePath: ['.env'],
     }),
@@ -92,6 +95,7 @@ const infrastructureDatabaseModule = (databaseConfig() as DatabaseConfig)
     MailModule,
     MailerModule,
     HomeModule,
+    AdminPanelModule,
   ],
 })
 export class AppModule {}

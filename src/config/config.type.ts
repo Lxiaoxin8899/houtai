@@ -6,11 +6,13 @@ import { FacebookConfig } from '../auth-facebook/config/facebook-config.type';
 import { FileConfig } from '../files/config/file-config.type';
 import { GoogleConfig } from '../auth-google/config/google-config.type';
 import { MailConfig } from '../mail/config/mail-config.type';
+import { AdminConfig } from '../admin-panel/config/admin-config.type';
 
 export type AllConfigType = {
   app: AppConfig;
   apple: AppleConfig;
   auth: AuthConfig;
+  admin: AdminConfig;
   database: DatabaseConfig;
   facebook: FacebookConfig;
   file: FileConfig;

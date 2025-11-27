@@ -10,6 +10,11 @@
     "sourceMap": true,
     "outDir": "./dist",
     "baseUrl": "./",
+    "paths": {
+      "@adminjs/nestjs": ["node_modules/@adminjs/nestjs/types/index.d.ts"],
+      "@adminjs/typeorm": ["node_modules/@adminjs/typeorm/lib/index.d.ts"],
+      "@adminjs/mongoose": ["node_modules/@adminjs/mongoose/lib/index.d.ts"]
+    },
     "incremental": true,
     "skipLibCheck": true,
     "strictNullChecks": true,
